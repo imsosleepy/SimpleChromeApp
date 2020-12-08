@@ -10,7 +10,9 @@ function paintImage(imgNumber) {
     const image = new Image();
     image.src = `images/${imgNumber + 1}.jpg`;
     image.classList.add("bgImage");
+    image.height = '100%';
     body.appendChild(image);
+
 }
 
 function genRandom(){

@@ -44,6 +44,7 @@ function saveToDos() {
     //localStorage엔 string만 저장할 수 있다...
     //때문에 자바스크립트 object를 stringjson형태로 바꿔서 저장해줘야 한다.
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+    //paintBorder();
 }
 
 function handleSubmit(event){
@@ -61,6 +62,14 @@ function localToDos(){
             paintToDo(toDo.text);
         });
     } 
+}
+
+function paintBorder() {
+    if(toDos.length > 0){
+        toDoList.style.border = '1px solid white';
+    } else {
+        toDoList.style.border = '';
+    }
 }
 
 function init() {
