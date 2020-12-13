@@ -2,7 +2,7 @@ const clockContainer = document.querySelector(".js-clock");
 const time = document.querySelector(".js-time");
 const weeks = document.querySelector(".js-weeks");
 
-const weekDays = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+const weekDays = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
 
 function getTime() {
   // Don't delete this.
@@ -10,7 +10,7 @@ function getTime() {
   const year = date.getFullYear(); // 년도
   const month = date.getMonth() + 1;  // 월
   const day = date.getDate();  // 날짜
-  const week = date.getDay() - 1;
+  const week = date.getDay();
 
   const minutes = date.getMinutes();
   const hours = date.getHours();
